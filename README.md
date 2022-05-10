@@ -11,6 +11,17 @@ Features:
 
 Please take a look at the [configuration](config) file before starting the machine for the first time.
 
+To launch GUI set this variable in the config file
+
+From qemu 6.0 
+```
+VGALINE="-device virtio-vga-gl -display sdl,gl=on"
+```
+Before qemu 6.0
+```
+VGALINE="-vga virtio -display sdl,gl=on"
+```
+
 ## Change android system
 You can change the source file downloaded by editing [PKGBUILD](PKGBUILD) source and [.SRCINFO](.SRCINFO), or simply add a local file. If you chose to use a local file remember that the rpm package must be in the same directory as the PKBUILD file.
 
@@ -74,3 +85,26 @@ For details see [Arm-NativeBridge](https://github.com/SGNight/Arm-NativeBridge) 
 - Download [houdini.sfs](http://dl.android-x86.org/houdini/7_z/houdini.sfs) (7_z recommended)
 - Copy it to ```/system/etc/```
 - run the script ```/system/bin/enable_nativebridge```
+
+
+## Other functions
+Things like pinch zoom don't work directly, as a workaround you can connect the VM to [scrcpy](https://github.com/Genymobile/scrcpy)
+
+Connect via ADB
+```bash
+adb connect localhost:47000
+```
+Connect via scrcpy
+```bash
+scrcpy -b20M --render-driver=opengl
+```
+To zoom press [ctrl+left_click](https://github.com/Genymobile/scrcpy/releases/tag/v1.16)
+
+[All shortcuts](https://github.com/Genymobile/scrcpy/blob/master/README.md#Shortcuts)
+
+## Dependencies
+- rxvt-unicode
+- zenity
+- qemu
+- hicolor-icon-theme
+- inkscape (For application icon)
