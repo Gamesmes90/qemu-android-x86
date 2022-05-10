@@ -18,7 +18,7 @@ source=("android-x86-${_pkgver}.i686.rpm::https://osdn.net/frs/redir.php?m=rwtha
 sha256sums=('9c21b07f29d1346c9956b789faede1624e8338773b8ba7d81c084afe26989dc2'
             '8c80b881727efc8831c8ef53806e7c1d0427607e145aae09061c4870b6cd402f'
             '53a777517016c0180870eaa6a73a2f909ef103ced7be63f9b449905c182b7774'
-            'e9524cdb27c57e6650af763b2231d67ff3e2beb12f52133e7e95eda4f16b0881'
+            '915d455afd1e5466491c4bf8bf15b94cf30c5046af5a2d56ac1a0f1f2f6833a2'
             '8a5ed6a6c1a4dfd1c8af0ff5de48965ec2dc6b50f87e5f990d33c7025f63c8ec')
 
 #PKGEXT=".pkg.tar"
