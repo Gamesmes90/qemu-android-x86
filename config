@@ -50,3 +50,4 @@ SERIAL="mon:stdio" # console on terminal or in urxvt if gui mode.
 # the tested machines, only SDL.
 # Example (default):
 #VGALINE="-vga virtio -display sdl,gl=on"
+VGALINE="-device virtio-vga-gl -display sdl,gl=on"
